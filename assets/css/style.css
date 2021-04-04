@@ -1,0 +1,322 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+}
+
+.dropbtn {
+  background-color: #d3d3d3;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* div necessario para o conteudo suspenso */
+.dropdown {
+  position: absolute;
+  display: inline-block;
+}
+
+/* itens suspensos por padrão */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #7fffd4;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(77, 76, 76, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* cor dos links ao passar o mouse */
+.dropdown-content a:hover {
+  background-color: #faf8f8;
+}
+
+/* mostra o conteudo ao passar o mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #d3d3d3;
+}
+
+.webview {
+  width: 100%;
+  height: 100%;
+}
+.webview .intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://www.melhoresdestinos.com.br/wp-content/uploads/2019/02/passagens-aereas-nova-york-capa2019-06.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  color: #7fffd4;
+}
+.webview .intro h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+.webview .intro p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.webview .filmes {
+  width: 100%;
+  height: auto;
+}
+.webview .filmes .container {
+  padding: 0;
+}
+.webview .filmes .container .title {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.webview .filmes .container .f-filmes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2, auto);
+  row-gap: 10px;
+}
+.webview .filmes .container .f-filmes .photos {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.webview .filmes .container .f-filmes .photos .img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.webview .filmes .container .f-filmes .photos .img img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.webview .container {
+  width: 100%;
+  padding: 10px;
+}
+.webview .container .body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.webview .container .body .icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+}
+.webview .container .body .icon span i {
+  font-size: 60px;
+}
+
+.sobre {
+  width: 100%;
+}
+.sobre .c-container {
+  padding: 10px;
+}
+.sobre .c-container .c-photo {
+  width: 100%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.sobre .c-container .c-photo img {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.sobre .c-container .c-title {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+.sobre .c-container .c-title h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6;
+  font-weight: bold;
+}
+.sobre .c-container .c-descricao {
+  width: 100%;
+}
+.sobre .c-container .c-descricao p {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.webview .informacoes {
+  width: 100%;
+  height: 100%;
+  padding: auto;
+  position: relative;
+  background-color: #7fffd4;
+}
+.webview .informacoes h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.webview .informacoes p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.webview footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 50px;
+  background-color: #7fffd4;
+}
+.webview footer span {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+@media only screen and (min-width: 600px) {
+  .webview .into .container h1 {
+    font-size: 20.4rem;
+  }
+  .webview .into .container p {
+    font-size: 1.2rem;
+  }
+
+  .webview .filmes .container .title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .webview .filmes .container .f-filmes {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  .webview .filmes .container .f-filmes .photos {
+    height: 100%;
+  }
+  .webview .filmes .container .f-filmes .photos img {
+    position: relative;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .webview .intro {
+    background-repeat: round;
+  }
+  .webview .intro .container h1 {
+    font-size: 5rem;
+  }
+  .webview .intro .container p {
+    font-size: 2.4rem;
+  }
+
+  .webview .filmes .container {
+    width: 90%;
+    margin: auto;
+  }
+  .webview .filmes .container .title h2 {
+    font-size: 5rem;
+  }
+  .webview .filmes .container .f-filmes {
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  .webview .filmes .container .f-filmes .photos {
+    height: 100%;
+  }
+
+  .webview .container {
+    width: 90%;
+    margin: auto;
+  }
+  .webview .container .body {
+    width: 96%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  .webview .informacoes h2 {
+    font-size: 2rem;
+    text-align: left;
+    position: absolute;
+  }
+  .webview .informacoes p {
+    font-size: 1.6rem;
+    text-align: right;
+  }
+
+  .webview .sobre .c-container {
+    width: 90%;
+    margin: auto;
+  }
+  .webview .sobre .c-container .c-photo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+  }
+  .webview .sobre .c-container .c-photo img {
+    width: 100%;
+    max-width: 400px;
+  }
+  .webview .sobre .c-container .c-title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .webview .sobre .c-container .c-title h2 {
+    font-size: 2rem;
+  }
+  .webview .sobre .c-container .c-descricao {
+    padding: 10px;
+    margin-top: 0;
+  }
+  .webview .sobre .c-container .c-descricao p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
